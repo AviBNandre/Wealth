@@ -11,8 +11,13 @@ connectDB();
 
 const app = express();
 
-// Middleware
-app.use(cors());
+// Middleware - Updated CORS to allow frontend URL
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL || "http://localhost:3000",
+    credentials: true,
+  }),
+);
 app.use(express.json());
 
 // Routes
