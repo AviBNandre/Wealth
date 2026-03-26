@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import { Eye, EyeOff, Lock, Mail, User } from "lucide-react";
+import API from "../utils/api";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -23,7 +23,7 @@ const Register = () => {
       return;
     }
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", {
+      const res = await API.post("/auth/register", {
         name,
         email,
         password,
