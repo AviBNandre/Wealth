@@ -24,9 +24,16 @@ exports.register = async (req, res) => {
       password: hashedPassword,
     });
 
+    // Create JWT Token
+    const secret = process.env.JWT_SECRET || "fallback_secret_for_development";
+    const token = jwt.sign({ id: user._id }, secret, {
+      expiresIn: "30d",
+    });
+
     res.status(201).json({
       success: true,
-      message: "User registered successfully!",
+      token,
+      user: { id: user._id, name: user.name, email: user.email },
     });
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -51,9 +58,7 @@ exports.login = async (req, res) => {
     }
 
     // Create JWT Token
-    // We added a fallback string here so it never crashes with "must have a value" again
     const secret = process.env.JWT_SECRET || "fallback_secret_for_development";
-
     const token = jwt.sign({ id: user._id }, secret, {
       expiresIn: "30d",
     });
