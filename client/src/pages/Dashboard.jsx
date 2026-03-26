@@ -23,6 +23,7 @@ import {
 } from "recharts";
 import Navbar from "../components/Navbar.jsx";
 import API from "../utils/api";
+import SkeletonLoader from "../components/SkeletonLoader";
 
 const Dashboard = ({ isDarkMode, setIsDarkMode }) => {
   const [chartView, setChartView] = useState("weekly");
@@ -315,19 +316,54 @@ const Dashboard = ({ isDarkMode, setIsDarkMode }) => {
         style={{
           backgroundColor: theme.bg,
           minHeight: "100vh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          padding: "36px 40px",
+          fontFamily: "'Inter', sans-serif",
         }}
       >
+        <div style={{ marginBottom: "28px" }}>
+          <div
+            style={{
+              width: "250px",
+              height: "32px",
+              backgroundColor: isDarkMode ? "#1F2937" : "#E5E7EB",
+              borderRadius: "8px",
+              marginBottom: "8px",
+              animation: "pulse 1.5s ease-in-out infinite",
+            }}
+          />
+          <div
+            style={{
+              width: "180px",
+              height: "16px",
+              backgroundColor: isDarkMode ? "#1F2937" : "#E5E7EB",
+              borderRadius: "4px",
+              animation: "pulse 1.5s ease-in-out infinite",
+            }}
+          />
+        </div>
+        <SkeletonLoader type="card" count={4} isDarkMode={isDarkMode} />
         <div
           style={{
-            color: theme.text,
-            fontSize: "18px",
-            fontFamily: "'Inter', sans-serif",
+            display: "grid",
+            gridTemplateColumns: "2fr 1fr",
+            gap: "24px",
+            marginTop: "28px",
           }}
         >
-          Loading your dashboard...
+          <SkeletonLoader type="chart" isDarkMode={isDarkMode} />
+          <SkeletonLoader type="chart" isDarkMode={isDarkMode} />
+        </div>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1.5fr 1fr 1fr",
+            gap: "24px",
+            marginTop: "28px",
+          }}
+        >
+          <SkeletonLoader type="line" count={5} isDarkMode={isDarkMode} />
+          <SkeletonLoader type="line" count={5} isDarkMode={isDarkMode} />
+          <SkeletonLoader type="line" count={5} isDarkMode={isDarkMode} />
         </div>
       </div>
     );
@@ -354,6 +390,8 @@ const Dashboard = ({ isDarkMode, setIsDarkMode }) => {
             justifyContent: "space-between",
             alignItems: "center",
             marginBottom: "28px",
+            flexWrap: "wrap",
+            gap: "16px",
           }}
         >
           <div className="animate-fadeInUp">
@@ -554,6 +592,8 @@ const Dashboard = ({ isDarkMode, setIsDarkMode }) => {
                 justifyContent: "space-between",
                 alignItems: "center",
                 marginBottom: "20px",
+                flexWrap: "wrap",
+                gap: "12px",
               }}
             >
               <h3
@@ -1500,6 +1540,7 @@ const Dashboard = ({ isDarkMode, setIsDarkMode }) => {
                   outline: "none",
                   boxSizing: "border-box",
                   fontFamily: "'Inter', sans-serif",
+                  marginTop: "6px",
                 }}
               />
             </div>
@@ -1535,6 +1576,7 @@ const Dashboard = ({ isDarkMode, setIsDarkMode }) => {
                   outline: "none",
                   boxSizing: "border-box",
                   fontFamily: "'Inter', sans-serif",
+                  marginTop: "6px",
                 }}
               />
             </div>
@@ -1570,6 +1612,7 @@ const Dashboard = ({ isDarkMode, setIsDarkMode }) => {
                   outline: "none",
                   boxSizing: "border-box",
                   fontFamily: "'Inter', sans-serif",
+                  marginTop: "6px",
                 }}
               />
             </div>
@@ -1707,7 +1750,7 @@ const Dashboard = ({ isDarkMode, setIsDarkMode }) => {
                 outline: "none",
                 boxSizing: "border-box",
                 fontFamily: "'Inter', sans-serif",
-                marginTop: "8px",
+                marginTop: "6px",
               }}
             />
             <button
