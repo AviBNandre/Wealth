@@ -24,6 +24,8 @@ _Track smarter. Save better. Live freely._
 
 Whether you're managing solo finances or splitting bills with friends, Wealth makes money management effortless and visual.
 
+https://wealth-rust.vercel.app
+
 ---
 
 ## ✨ Features at a Glance
