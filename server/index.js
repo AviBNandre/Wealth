@@ -12,12 +12,21 @@ connectDB();
 const app = express();
 
 // Middleware - Updated CORS to allow frontend URL
-app.use(
-  cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:3000",
-    credentials: true,
-  }),
-);
+// app.use(
+//   cors({
+//     origin: process.env.FRONTEND_URL || "http://localhost:3000",
+//     credentials: true,
+//   }),
+// );
+
+
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://split-mate-chi.vercel.app"
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes
