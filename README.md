@@ -2,7 +2,7 @@
 
 <img src="https://img.shields.io/badge/SplitMate-Finance%20Manager-4f46e5?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyek0xMSAxN3YtNkg5bDMtNCAzIDRoLTJ2NmgtMnoiLz48L3N2Zz4=" />
 
-# 💰 SplitMate
+# 💰Wealth
 
 ### AI-Powered Personal Finance Manager
 
@@ -18,11 +18,11 @@ _Track smarter. Save better. Live freely._
 
 ---
 
-## 🌟 What is SplitMate?
+## 🌟 What is Wealth?
 
-**SplitMate** is a full-stack personal finance management web application built on the **MERN stack**. It gives you complete control over your financial life — from tracking daily expenses and setting savings goals, to getting AI-powered spending insights and generating downloadable financial reports.
+**Wealth** is a full-stack personal finance management web application built on the **MERN stack**. It gives you complete control over your financial life — from tracking daily expenses and setting savings goals, to getting AI-powered spending insights and generating downloadable financial reports.
 
-Whether you're managing solo finances or splitting bills with friends, SplitMate makes money management effortless and visual.
+Whether you're managing solo finances or splitting bills with friends, Wealth makes money management effortless and visual.
 
 ---
 
@@ -101,7 +101,7 @@ Personalized savings tips, budget health score gauge, and spending trend charts 
 ## 📁 Project Structure
 
 ```
-SplitMate/
+Wealth/
 ├── client/                          # React Frontend
 │   ├── public/
 │   └── src/
@@ -341,12 +341,11 @@ git push origin feature/YourFeature
 
 <div align="center">
 
-**Veda Shiva Prasad**
+**Avinash Nandre**
 
-MCA Graduate • Full Stack Developer • MERN Stack
+B.tech Graduate • Full Stack Developer • MERN Stack
 
-[![GitHub](https://img.shields.io/badge/GitHub-Veda--Shiva--Prasad-181717?style=flat-square&logo=github)](https://github.com/Veda-Shiva-Prasad)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-vedashivaprasad-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/vedashivaprasad)
+[![GitHub]](https://github.com/-AviBNandre)
 
 </div>
 
